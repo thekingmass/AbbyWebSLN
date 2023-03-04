@@ -8,7 +8,7 @@
         </div>
         <div class="col-6 text-end">
             <a asp-page="Create" class="btn btn-primary">
-                <i class="bi bi-pencil-square"></i> &nbsp; Create New Category
+                <i class="bi bi-plus-circle"></i>  &nbsp; Create New Category
             </a>
         </div>
     </div>
@@ -18,6 +18,7 @@
             <tr>
                 <th>Category Name</th>
                 <th>Display Order</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -26,6 +27,16 @@
                 <tr>
                     <td width="50%">@obj.Name</td>
                     <td width="30%">@obj.DisplayOrder</td>
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            <a asp-page="Edit" asp-route-id="@obj.Id" class="btn btn-primary">
+                                <i class="bi bi-pencil-square"></i>
+                            </a>
+                            <a asp-page="Delete" class="btn btn-danger">
+                            <i class="bi bi-trash"></i>
+                            </a>
+                        </div>
+                    </td>
                 </tr>  
             }
             
