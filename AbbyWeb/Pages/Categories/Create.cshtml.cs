@@ -26,7 +26,7 @@ public class CreateModel : PageModel
     {
         if (Category.Name == Category.DisplayOrder.ToString())
         {
-            ModelState.AddModelError(string.Empty, "The DisplayOrder cannot exactly match the name");
+            ModelState.AddModelError("Category.Name", "The Display Order cannot exactly match the name");
         }
         if (ModelState.IsValid)
         {
